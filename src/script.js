@@ -17,8 +17,16 @@ function updateTime() {
   barcelonaTime.innerHTML = barcelonaCurrentTime.format(
     "h:mm:ss[<small>]A[</small>]"
   );
+  //Moscow
+  let moscowElement = document.querySelector("#moscow");
+  let moscowDate = moscowElement.querySelector(".date");
+  let moscowTime = moscowElement.querySelector(".time");
+  let moscowCurrentTime = moment().tz("Europe/Moscow");
+  moscowDate.innerHTML = moscowCurrentTime.format("MMMM Do YYYY");
+  moscowTime.innerHTML = moscowCurrentTime.format(
+    "h:mm:ss[<small>]A[</small>]"
+  );
 }
-
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
@@ -39,7 +47,7 @@ function updateCity(event) {
                 <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
             </div>
             <div class="time">${cityTime.format(
-              "h:mm:ss[<small>]A[</small>]"
+              "h:mm[<small>]A[</small>]"
             )}</div>
         </div>`;
 }
