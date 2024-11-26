@@ -17,13 +17,13 @@ function updateTime() {
   barcelonaTime.innerHTML = barcelonaCurrentTime.format(
     "h:mm:ss[<small>]A[</small>]"
   );
-  //Moscow
-  let moscowElement = document.querySelector("#moscow");
-  let moscowDate = moscowElement.querySelector(".date");
-  let moscowTime = moscowElement.querySelector(".time");
-  let moscowCurrentTime = moment().tz("Europe/Moscow");
-  moscowDate.innerHTML = moscowCurrentTime.format("MMMM Do YYYY");
-  moscowTime.innerHTML = moscowCurrentTime.format(
+  //Shanghai
+  let shanghaiElement = document.querySelector("#shanghai");
+  let shanghaiDate = shanghaiElement.querySelector(".date");
+  let shanghaiTime = shanghaiElement.querySelector(".time");
+  let shanghaiCurrentTime = moment().tz("Asia/Shanghai");
+  shanghaiDate.innerHTML = shanghaiCurrentTime.format("MMMM Do YYYY");
+  shanghaiTime.innerHTML = shanghaiCurrentTime.format(
     "h:mm:ss[<small>]A[</small>]"
   );
 }
